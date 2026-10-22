@@ -1,0 +1,9 @@
+# Old Google Sites addresses, sent to their new pages so existing links keep working.
+/home                          /                 301
+/sessions                      /play/            301
+/register-to-play-here         /play/            301
+/dm-for-hire                   /hire/            301
+/the-world-of-cobblecrest      /world/           301
+/cobblecrest-chronicles-story  https://cobblecrestchronicles.blogspot.com/  301
+# Short name for the lore app
+/archive                       https://cobblecrest-archive.cobblecrest.workers.dev/  302

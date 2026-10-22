@@ -1,0 +1,187 @@
+/* Cobblecrest Design System tokens, copied unchanged from the design system made in Claude Design (2026-10-10). Fonts load through a <link> in each page. */
+/* ---- tokens/colors.css ---- */
+:root{
+/* --- Ink ramp: warm neutral greys. The whole interior of every printed product
+       lives in this ramp, top to bottom, and nothing else. --- */
+--ink-900:#141210;--ink-800:#22201c;--ink-700:#33302a;--ink-600:#4a463e;
+--ink-500:#6a6459;--ink-400:#8c8579;--ink-300:#b0a99b;--ink-200:#cfc8b8;
+--ink-100:#e6e0d1;--ink-050:#f4efe3;
+/* --- Paper --- */
+--paper:#fbf8f0;--paper-tinted:#f4efe3;--paper-white:#ffffff;
+/* --- Ember: forge-fire rust. The single primary accent. --- */
+--ember-700:#6f2d17;--ember-600:#8e3b1f;--ember-500:#a9502c;--ember-300:#d08a63;--ember-100:#f0dccf;
+/* --- Moss: damp forest green --- */
+--moss-700:#2c3827;--moss-600:#3b4a34;--moss-500:#556b47;--moss-300:#8fa07c;--moss-100:#dfe4d5;
+/* --- Brass: lamplight, gilding, treasure --- */
+--brass-700:#6d4e17;--brass-600:#8a6520;--brass-500:#b4874b;--brass-300:#dcc08a;--brass-100:#f4e8cf;
+/* --- Woad: cold dye-blue, water and night --- */
+--woad-700:#1b2b38;--woad-600:#263a4a;--woad-500:#3a5568;--woad-300:#7a93a6;--woad-100:#dbe3e9;
+/* --- Blood: dried red, danger and hazard --- */
+--blood-700:#571c18;--blood-600:#6e241f;--blood-500:#8d3c33;--blood-100:#eed6d2;
+
+/* ===== Semantic aliases: always author against these ===== */
+--text-heading:var(--ink-900);
+--text-body:var(--ink-800);
+--text-muted:var(--ink-500);
+--text-faint:var(--ink-400);
+--text-inverse:var(--ink-050);
+--text-accent:var(--ember-600);
+--text-on-accent:var(--paper);
+
+--surface-page:var(--paper);
+--surface-card:var(--paper-white);
+--surface-sunken:var(--paper-tinted);
+--surface-inset:var(--ink-100);
+--surface-inverse:var(--ink-900);
+--surface-accent:var(--ember-600);
+--surface-accent-soft:var(--ember-100);
+
+--border-hairline:var(--ink-200);
+--border-rule:var(--ink-300);
+--border-strong:var(--ink-700);
+--border-forged:var(--ink-900);
+--border-accent:var(--ember-600);
+
+--link:var(--ember-600);
+--link-hover:var(--ember-700);
+--link-visited:var(--woad-600);
+--focus-ring:var(--brass-600);
+
+--status-danger:var(--blood-600);
+--status-danger-soft:var(--blood-100);
+--status-caution:var(--brass-600);
+--status-caution-soft:var(--brass-100);
+--status-good:var(--moss-600);
+--status-good-soft:var(--moss-100);
+--status-info:var(--woad-600);
+--status-info-soft:var(--woad-100);
+}
+/* Print-interior theme: collapses every accent onto the ink ramp so a page proofs
+   correctly on a one-colour press and stays legible in poor table light. */
+.theme-press{
+--text-accent:var(--ink-900);--surface-accent:var(--ink-800);--surface-accent-soft:var(--ink-100);
+--border-accent:var(--ink-900);--link:var(--ink-900);--link-hover:var(--ink-600);--link-visited:var(--ink-700);
+--status-danger:var(--ink-800);--status-danger-soft:var(--ink-100);--status-caution:var(--ink-700);
+--status-caution-soft:var(--ink-100);--status-good:var(--ink-700);--status-good-soft:var(--ink-100);
+--status-info:var(--ink-700);--status-info-soft:var(--ink-100);--focus-ring:var(--ink-700);
+}
+/* ---- tokens/typography.css ---- */
+:root{
+/* Families */
+--font-display:"Cinzel",'Trajan Pro',Georgia,serif;          /* inscriptional caps, from the logo lettering */
+--font-body:"EB Garamond",Georgia,'Times New Roman',serif;    /* long-form reading, print-first */
+--font-ui:"Alegreya Sans",'Segoe UI',system-ui,sans-serif;    /* labels, chrome, screen UI */
+--font-ui-caps:"Alegreya Sans SC",'Alegreya Sans',system-ui,sans-serif; /* small-caps headers, stat lines */
+--font-mono:"Courier Prime",'Courier New',monospace;          /* fill-in fields, dice notation, tracker boxes */
+
+/* Sizes — print-derived scale, 16px body = 10.5pt */
+--text-2xs:11px;--text-xs:12px;--text-sm:14px;--text-base:16px;--text-md:18px;
+--text-lg:21px;--text-xl:25px;--text-2xl:31px;--text-3xl:39px;--text-4xl:49px;--text-5xl:62px;
+
+/* Line heights */
+--leading-tight:1.1;--leading-snug:1.25;--leading-normal:1.45;--leading-body:1.55;--leading-loose:1.7;
+
+/* Weights */
+--weight-regular:400;--weight-medium:500;--weight-bold:700;--weight-heavy:800;--weight-black:900;
+
+/* Tracking — display caps always get positive tracking */
+--tracking-tightest:-0.01em;--tracking-normal:0;--tracking-wide:0.04em;
+--tracking-wider:0.08em;--tracking-widest:0.16em;
+
+/* Semantic roles */
+--type-title-font:var(--font-display);--type-title-size:var(--text-4xl);
+--type-title-tracking:var(--tracking-wider);--type-title-leading:var(--leading-tight);
+--type-chapter-size:var(--text-3xl);
+--type-heading-size:var(--text-xl);
+--type-subheading-font:var(--font-ui-caps);--type-subheading-size:var(--text-md);
+--type-subheading-tracking:var(--tracking-wide);
+--type-body-font:var(--font-body);--type-body-size:var(--text-md);--type-body-leading:var(--leading-body);
+--type-caption-font:var(--font-ui);--type-caption-size:var(--text-sm);
+--type-label-font:var(--font-ui-caps);--type-label-size:var(--text-xs);
+--type-label-tracking:var(--tracking-widest);
+--type-field-font:var(--font-mono);--type-field-size:var(--text-sm);
+--measure-body:66ch;--measure-narrow:46ch;
+}
+/* ---- tokens/spacing.css ---- */
+:root{
+/* 4px base, doubling at the top. Printed pages use the same ladder in px at 96dpi. */
+--space-0:0;--space-1:2px;--space-2:4px;--space-3:8px;--space-4:12px;--space-5:16px;
+--space-6:20px;--space-7:24px;--space-8:32px;--space-9:40px;--space-10:48px;
+--space-11:64px;--space-12:80px;--space-13:96px;--space-14:128px;
+
+/* Semantic spacing */
+--gap-inline:var(--space-3);--gap-stack:var(--space-5);--gap-section:var(--space-10);
+--pad-control:var(--space-3);--pad-card:var(--space-7);--pad-box:var(--space-5);
+--pad-page:var(--space-11);
+
+/* Page geometry — Cobblecrest interiors are US Letter, single column with a
+   wide outer margin reserved for marginalia and dice icons. */
+--page-width:8.5in; /* @kind spacing */
+--page-height:11in; /* @kind spacing */
+--page-margin-top:0.75in;--page-margin-bottom:0.85in;
+--page-margin-inner:0.9in;--page-margin-outer:1.35in;
+--column-gap:0.35in;
+}
+/* ---- tokens/borders.css ---- */
+:root{
+/* Radii — hand-cut, not injection-moulded. Almost everything is square;
+   2px is the largest radius used on interior print elements. */
+--radius-none:0;--radius-hair:1px;--radius-sm:2px;--radius-md:3px;--radius-lg:5px;
+--radius-pill:999px;
+--radius-control:var(--radius-sm);--radius-card:var(--radius-md);--radius-box:var(--radius-none);
+
+/* Widths — iron rules */
+--rule-hair:1px;--rule-thin:1.5px;--rule-medium:2px;--rule-thick:3px;--rule-forged:4px;
+--border-control:var(--rule-thin) solid var(--border-strong);
+--border-card:var(--rule-hair) solid var(--border-hairline);
+--border-box:var(--rule-medium) solid var(--border-forged);
+--rule-section:var(--rule-hair) solid var(--border-rule);
+}
+/* ---- tokens/elevation.css ---- */
+:root{
+/* Shadows are used sparingly and never coloured — screen-only, ink-tinted,
+   short and hard, like a card lying on a table. Print surfaces get none. */
+--shadow-none:none;
+--shadow-raised:0 1px 0 0 rgba(20,18,16,.18);
+--shadow-card:0 1px 2px rgba(20,18,16,.14),0 2px 8px rgba(20,18,16,.08);
+--shadow-lifted:0 2px 4px rgba(20,18,16,.16),0 8px 22px rgba(20,18,16,.12);
+--shadow-dialog:0 10px 40px rgba(20,18,16,.32);
+--shadow-inset-press:inset 0 2px 0 rgba(20,18,16,.20);
+--shadow-inset-field:inset 0 1px 0 rgba(20,18,16,.10);
+--ring-focus:0 0 0 2px var(--paper),0 0 0 4px var(--focus-ring);
+}
+/* ---- tokens/motion.css ---- */
+:root{
+/* Motion is functional only: things settle, they never bounce or spring.
+   Nothing on a printed page moves; screen UI moves the minimum needed to read. */
+--dur-instant:80ms; /* @kind other */
+--dur-fast:130ms; /* @kind other */
+--dur-base:200ms; /* @kind other */
+--dur-slow:320ms; /* @kind other */
+--dur-page:480ms; /* @kind other */
+--ease-standard:cubic-bezier(.2,.6,.2,1); /* @kind other */
+--ease-out:cubic-bezier(.16,.84,.44,1); /* @kind other */
+--ease-in:cubic-bezier(.5,0,.9,.4); /* @kind other */
+--transition-control:background-color var(--dur-fast) var(--ease-standard),color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard);
+--transition-surface:opacity var(--dur-base) var(--ease-out),transform var(--dur-base) var(--ease-out);
+}
+/* ---- tokens/base.css ---- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--type-body-font);font-size:var(--type-body-size);line-height:var(--type-body-leading);text-wrap:pretty;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{margin:0;color:var(--text-heading);font-weight:var(--weight-bold);line-height:var(--leading-tight)}
+h1,h2{font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-wider)}
+h1{font-size:var(--type-chapter-size)}
+h2{font-size:var(--type-heading-size)}
+h3,h4{font-family:var(--font-ui-caps);letter-spacing:var(--tracking-wide);font-size:var(--type-subheading-size)}
+p{margin:0 0 var(--space-5)}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--link-hover);text-decoration-thickness:2px}
+a:visited{color:var(--link-visited)}
+:focus-visible{outline:none;box-shadow:var(--ring-focus)}
+hr{border:0;border-top:var(--rule-section);margin:var(--space-8) 0}
+small{font-family:var(--font-ui);font-size:var(--type-caption-size)}
+code,kbd{font-family:var(--font-mono);font-size:.94em}
+table{border-collapse:collapse}
+::selection{background:var(--brass-300);color:var(--ink-900)}
+@media print{body{background:#fff}}
