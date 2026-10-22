@@ -1,6 +1,6 @@
 # Cobblecrest Chronicles website
 
-Source files for cobblecrestchronicles.com. Claude edits these files when Andy asks for a change, and Cloudflare Pages publishes every saved change on its own.
+Source files for cobblecrestchronicles.com. Claude edits these files when Andy asks for a change, and Cloudflare publishes every saved change on its own.
 
 ## How the site is built
 
@@ -10,16 +10,23 @@ Source files for cobblecrestchronicles.com. Claude edits these files when Andy a
 - `tools/build.py` puts the pages into the layout and writes the finished site to `site/`. Run `python3 tools/build.py` after any change. It needs only Python 3.
 - `site/` is what Cloudflare publishes. It is rebuilt by the script, so edit `src/`, never `site/`.
 
-## Cloudflare Pages settings
+## Cloudflare settings
 
-| Setting | Value |
+The site runs as a Cloudflare Worker named `cobblecrest-site`, the same kind of project as the Cobblecrest Archive. It serves the `site/` folder as plain files and has no server code. `wrangler.toml` holds the settings.
+
+| Setting (Worker, then Settings, then Builds) | Value |
 | --- | --- |
+| Git repository | `lindsayandy/cobblecrest-site` |
 | Production branch | `main` |
-| Framework preset | None |
 | Build command | leave empty |
-| Build output directory | `site` |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | `/` |
 
-The built `site/` folder is saved in the repository, so Cloudflare does not need to run anything.
+The built `site/` folder is saved in the repository, so Cloudflare does not need to build anything. It only uploads the folder. Cloudflare reads `_redirects` and `_headers` from the folder, and unknown addresses get `404.html`.
+
+Test address before the domain moves: https://cobblecrest-site.cobblecrest.workers.dev
+
+Why a Worker and not Cloudflare Pages: in October 2026 Cloudflare's guidance says to use Workers for new projects, and new features go to Workers. Pages still works. Using a Worker keeps the site and the Archive on one system.
 
 ## Undoing a change
 

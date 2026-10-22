@@ -3,7 +3,7 @@
 
 Reads the shared layout (src/layout.html) and each page (src/pages/*.html),
 copies src/static/ as it is, and writes the finished site to site/.
-Cloudflare Pages publishes the site/ folder. Run this after any change:
+Cloudflare (Workers static assets) publishes the site/ folder. Run this after any change:
 
     python3 tools/build.py
 

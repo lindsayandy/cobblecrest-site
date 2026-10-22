@@ -1,0 +1,8 @@
+# Cobblecrest Chronicles website: a static site served by Cloudflare Workers (no server code).
+# Cloudflare Workers Builds deploys this on every push to main with `npx wrangler deploy`.
+name = "cobblecrest-site"
+compatibility_date = "2026-10-01"
+
+[assets]
+directory = "./site"              # the finished pages written by tools/build.py
+not_found_handling = "404-page"   # unknown addresses get site/404.html with a 404 status
