@@ -33,7 +33,7 @@ The look comes from the Cobblecrest Design System (artifact "Cobblecrest Design 
 - Square corners (5px at most), flat color, no gradients, no textures.
 - One rust (ember) accent per view, usually the main button.
 - The only ornament is the divider: two hairlines with a small diamond between them (`<div class="rule"><i></i></div>`).
-- Use the real badge files in `src/static/assets/`. Never redraw the logo. No empty picture placeholders.
+- The logo is the original black badge on white (`badge-*.jpg` in `src/static/assets/`), shown as a round seal with `border-radius: 50%` on light and dark backgrounds alike. Never redraw or recolor it. No empty picture placeholders.
 - Icons come from Lucide 0.414.0 and are copied into `src/static/assets/icons/`. Add a new one by copying its SVG from the same version.
 
 ## Links worth knowing
