@@ -40,5 +40,7 @@ The look comes from the Cobblecrest Design System (artifact "Cobblecrest Design 
 
 - Lore app (public): https://cobblecrest-archive.cobblecrest.workers.dev/ (also `/archive` on this site)
 - State of Comics sign-up list: https://stateofcomics.com/pages/d-d-registration
-- Player's Guide: https://docs.google.com/document/d/1va5MrvD87q2X3s9EhSouN9FIPFhzDNDuEx2mEbWJsRA/edit
+- Guides: the site serves PDF copies from `src/static/guides/` (the Player's Guide and Eddred's Regional Guide). Andy's working Google Docs stay private, so never link them. Each PDF has a Fan Content notice page right after its cover. When Andy updates a guide, export its newest version to PDF, run `python3 tools/add_notice.py <source.pdf> "<Guide title>" <output.pdf> <scratch.pdf>`, replace the file in `src/static/guides/`, and update the page count on the World page.
+- Player's Guide working doc (private): https://docs.google.com/document/d/1va5MrvD87q2X3s9EhSouN9FIPFhzDNDuEx2mEbWJsRA/edit
+- Regional Guide source PDF (1498 DR, in Drive): https://drive.google.com/file/d/1tcalCuIXdRtSmLXGf3leVbOt2jZSEEU9/view
 - Old Google Sites addresses redirect to the new pages through `src/static/_redirects`.
