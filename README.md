@@ -37,3 +37,7 @@ GitHub keeps every version of every file. Any change can be undone by restoring 
 - Look and feel: the Cobblecrest Design System (made in Claude Design, October 2026). `src/static/css/tokens.css` is copied from it unchanged.
 - Icons: [Lucide](https://lucide.dev) 0.414.0, ISC license (see `src/static/assets/icons/LICENSE-lucide.txt`).
 - Fonts: Cinzel, EB Garamond, Alegreya Sans, Alegreya Sans SC and Courier Prime, loaded from Google Fonts.
+
+## Parked ideas
+
+- **Public Feat Forge (looked at October 22, 2026, parked by Andy).** The table version (claude.ai artifact "Cobblecrest Feat Forge") can't be linked. Its open feat grants and players' submissions show character names to anyone who opens it, and it needs a Claude sign-in. Its "Describe it" mode works only in the Google version, which uses an AI model. The plan if Andy picks it up again: a separate practice-only page on the Tools page, with the menu builder, point budget, scoring and D&D Beyond entry card, and with no grants, submissions, DM desk, sign-in or AI. Drafts would save in the visitor's browser. Check the rules text first: keep SRD wording with credit, and summarize or drop feats from paid books.
