@@ -24,7 +24,7 @@ The site runs as a Cloudflare Worker named `cobblecrest-site`, the same kind of 
 
 The built `site/` folder is saved in the repository, so Cloudflare does not need to build anything. It only uploads the folder. Cloudflare reads `_redirects` and `_headers` from the folder, and unknown addresses get `404.html`.
 
-Live at https://cobblecrestchronicles.com since October 22, 2026. The Worker serves the bare address and www. A Cloudflare redirect rule sends www to the bare address with a 301. The domain's DNS is on Cloudflare (free plan); the registration stays at Squarespace. Cloudflare Web Analytics counts visits (automatic setup, no code in the pages). The test address https://cobblecrest-site.cobblecrest.workers.dev still works.
+Live at https://cobblecrestchronicles.com since October 22, 2026. The Worker serves the bare address and www. A Cloudflare redirect rule sends www to the bare address with a 301, and "Always Use HTTPS" (SSL/TLS, Edge Certificates) sends plain http addresses to https. The domain's DNS is on Cloudflare (free plan); the registration stays at Squarespace. Cloudflare Web Analytics counts visits (automatic setup, no code in the pages). The test address https://cobblecrest-site.cobblecrest.workers.dev still works.
 
 Why a Worker and not Cloudflare Pages: in October 2026 Cloudflare's guidance says to use Workers for new projects, and new features go to Workers. Pages still works. Using a Worker keeps the site and the Archive on one system.
 
