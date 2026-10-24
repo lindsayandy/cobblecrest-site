@@ -19,6 +19,7 @@ Andy asks for changes in plain language. Make the change, rebuild, check it, and
 - **Player secrets.** Session plans are posted about three weeks after they run, with live secrets removed.
 - **Player data.** Link only tools that hold no player data. Loot Claims and Feat Forge show player and character names, so they stay off the public site.
 - **Facts.** Prices, times, policies and addresses come from Andy or his records. Never invent one. If a fact is unknown, leave it out and ask.
+- **Guide updates.** Whenever the Player's Guide or Eddred's Regional Guide changes, refresh both copies in the same session, without being asked. One copy is the PDF on this site (steps under "Links worth knowing"). The other is the Cobblecrest Archive (`lindsayandy/cobblecrest-archive`, README section "When the Player's Guide or Regional Guide changes"). Then tell Andy both are done.
 
 ## Writing
 
