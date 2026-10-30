@@ -40,6 +40,7 @@ The look comes from the Cobblecrest Design System (artifact "Cobblecrest Design 
 ## Links worth knowing
 
 - Lore app (public): https://cobblecrest-archive.cobblecrest.workers.dev/ (also `/archive` on this site)
+- Merch shop (Fourthwall): https://cobblecrest-chronicles-llc-shop.fourthwall.com/ (also `/shop` on this site). The Merch page shows eight products with photos copied into `src/static/assets/merch/` (360 by 480). Prices are left off the page because they change in the shop. If a product is renamed or removed in the shop, update or drop its card. Keep the shop at a product count other than 13.
 - State of Comics sign-up list: https://stateofcomics.com/pages/d-d-registration
 - Guides: the site serves PDF copies from `src/static/guides/` (the Player's Guide and Eddred's Regional Guide). Andy's working Google Docs stay private, so never link them. Each PDF has a Fan Content notice page right after its cover. When Andy updates a guide, export its newest version to PDF, run `python3 tools/add_notice.py <source.pdf> "<Guide title>" <output.pdf> <scratch.pdf>`, replace the file in `src/static/guides/`, and update the page count on the World page.
 - Player's Guide working doc (private): https://docs.google.com/document/d/1va5MrvD87q2X3s9EhSouN9FIPFhzDNDuEx2mEbWJsRA/edit
