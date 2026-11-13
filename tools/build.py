@@ -27,7 +27,6 @@ NAV = [
     ("play", "Play", "/play/"),
     ("hire", "Hire Andy", "/hire/"),
     ("world", "The World", "/world/"),
-    ("tools", "Tools", "/tools/"),
     ("merch", "Merch", "/merch/"),
     ("contact", "Contact", "/contact/"),
 ]

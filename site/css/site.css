@@ -187,3 +187,6 @@ h3 { font-family: var(--font-display); text-transform: uppercase; letter-spacing
   .pagehead, .band-ink { background: #fff; color: #000; }
   .pagehead h1, .band-ink h1 { color: #000; }
 }
+
+/* Links to a section (like /world/#archive) stop below the sticky header. */
+[id] { scroll-margin-top: calc(var(--bar-h) + 16px); }
